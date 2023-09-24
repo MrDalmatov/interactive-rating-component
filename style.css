@@ -37,11 +37,22 @@ body {
   height: 100%;
 }
 
-.rating-item {
+.rating-item, .thank-you-item {
   background: hsla(213, 20%, 18%, 1);
-  background: linear-gradient(0deg, hsla(213, 20%, 18%, 1) 0%, hsla(216, 12%, 54%, 1) 100%);
+  background-image: linear-gradient(
+  180deg,
+  hsl(216deg 12% 54%) 0%,
+  hsl(216deg 11% 51%) 0%,
+  hsl(216deg 10% 48%) 0%,
+  hsl(216deg 11% 44%) 0%,
+  hsl(216deg 11% 40%) 2%,
+  hsl(216deg 12% 36%) 4%,
+  hsl(215deg 12% 31%) 9%,
+  hsl(215deg 14% 26%) 18%,
+  hsl(213deg 20% 18%) 44%
+);
   color: var(--white);
-  width: 500px;
+  max-width: 400px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -49,28 +60,110 @@ body {
   border-radius: 25px;
 }
 
+
+
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.thank-you-item {
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
 .raiting-item__icon {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: var(--medium-grey);
+  background-color: hsl(213, 16%, 24%);
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.raiting-item__title {
+.thank-you-item__content {
+  text-align: center;
+}
+
+.raiting-item__title, .thank-you-item__title {
   font-size: 30px;
   margin-bottom: 15px;
 }
 
-.raiting-item__text {
+.raiting-item__text, .thank-you-item__text {
   font-size: 15px;
+  line-height: 1.5;
 }
 
 .raiting-item__buttons-box {
   display: flex;
+  justify-content: space-between;
+}
+
+.rating-item__button {
+  background-color: hsl(213, 16%, 24%);
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.rating-item__button:hover {
+  background-color: var(--orange);
+}
+
+
+.rating-item__button.selected {
+  background-color: var(--medium-grey);
+}
+
+.rating-item__submit-button {
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+.rating-item__submit-button:hover {
+  background-color: white;
+  color: var(--orange);
+}
+
+.thank-you-item__image {
+  display: block;
+  width: 200px;
+}
+
+.thank-you-item__selected {
+  background-color: hsl(214, 17%, 28%);
+  color: var(--orange);
+  padding: 5px 15px;
+  line-height: 1;
+  border-radius: 20px;
 }
 
 

@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="image/favicon-32x32.png">
+  <script defer src="script.js"></script>
   <title>RatingComponent</title>
 </head>
 <body>
@@ -22,13 +24,23 @@
             <p class="raiting-item__text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
           </div>
           <div class="raiting-item__buttons-box">
-            <div class="rating-item__bitton">1</div>
-            <div class="rating-item__bitton">2</div>
-            <div class="rating-item__bitton">3</div>
-            <div class="rating-item__bitton">4</div>
-            <div class="rating-item__bitton">5</div>
+            <div class="rating-item__button">1</div>
+            <div class="rating-item__button">2</div>
+            <div class="rating-item__button">3</div>
+            <div class="rating-item__button">4</div>
+            <div class="rating-item__button">5</div>
           </div>
           <button class="rating-item__submit-button">submit</button>
+        </div>
+        <div class="thank-you-item hidden">
+          <img src="image/illustration-thank-you.svg" class="thank-you-item__image">
+          <div class="thank-you-item__selected">
+            You selected 4 out of 5
+          </div>
+          <div class="thank-you-item__content">
+            <h3 class="thank-you-item__title">Thank you!</h3>
+            <p class="thank-you-item__text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+          </div>
         </div>
       </div>
     </div>
