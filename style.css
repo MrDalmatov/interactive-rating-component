@@ -180,6 +180,14 @@ body {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  /* Отключаем подсветку активированных элементов (нажатие) */
+ * {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+  }
+}
+
 
 
 
